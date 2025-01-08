@@ -1,0 +1,20 @@
+[project]
+name = "lingua_sensei"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.1.4",
+    "djangorestframework>=3.15.2",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.ruff]
+line-length = 180
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.10",
+    "pytest>=8.3.4",
+]
