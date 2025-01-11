@@ -14,7 +14,7 @@ uv run python manage.py runserver
 Running tests
 
 ```
-uv run coverage run -m pytest -v && uv run coverage report -m
+uv run pytest --cov=linguist --cov-report=html --cov-report=term-missing 
 ```
 
 ### WEB

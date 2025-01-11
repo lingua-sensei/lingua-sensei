@@ -5,16 +5,44 @@ description = ""
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "boto3>=1.35.94",
     "django>=5.1.4",
+    "django-storages>=1.14.4",
     "djangorestframework>=3.15.2",
     "python-dotenv>=1.0.1",
 ]
 
 [tool.ruff]
 line-length = 180
+exclude = [
+    ".venv",
+    "__pycache__",
+    "*/migrations",
+]
 
 [dependency-groups]
 dev = [
     "coverage>=7.6.10",
     "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-django>=4.9.0",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "linguist.settings"
+python_files = ["test_*.py", "tests.py"]
+
+[tool.coverage.run]
+source = ["linguist"]
+omit = [
+    "**/migrations/*",
+    "**/admin.py",
+    "**/apps.py",
+    "**/tests.py",
+    "**/__init__.py",
+    "linguist/asgi.py",
+    "linguist/wsgi.py",
+    "linguist/settings.py",
+    "linguist/urls.py",
+    "manage.py"
 ]
