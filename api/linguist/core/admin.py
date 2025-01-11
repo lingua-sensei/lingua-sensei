@@ -20,17 +20,20 @@ class SentenceWordFilter(admin.SimpleListFilter):
 
         if self.value() == 'sentence':
             return queryset.filter(
-                linked_count__gt=0,
-                correspondent_text__isnull=False,
-                correspondent_language__isnull=False,
-                text__contains=' '
-            ).exclude(correspondent_text='')
+                Q(linked_count__gt=0) &
+                ~Q(correspondent_text__isnull=True) &
+                ~Q(correspondent_text='') &
+                ~Q(correspondent_language__isnull=True) &
+                ~Q(correspondent_language='') &
+                Q(text__contains=' ')
+            )
         elif self.value() == 'word':
             return queryset.filter(
                 Q(linked_count=0) |
                 Q(correspondent_text__isnull=True) |
                 Q(correspondent_text='') |
                 Q(correspondent_language__isnull=True) |
+                Q(correspondent_language='') |
                 ~Q(text__contains=' ')
             )
         return queryset
