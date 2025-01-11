@@ -13,18 +13,10 @@ class AudioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Audio
-        fields = (
-            "id",
-            "text",
-            "language",
-            "file",
-            "correspondent_text",
-            "correspondent_language",
-            "linked_audios"
-        )
+        fields = ("id", "text", "language", "file", "correspondent_text", "correspondent_language", "linked_audios")
 
     def get_linked_audios(self, obj):
         return BasicAudioSerializer(
-            obj.linked_audios.order_by('?'),  # shuffle
-            many=True
+            obj.linked_audios.order_by("?"),  # shuffle
+            many=True,
         ).data

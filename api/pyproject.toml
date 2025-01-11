@@ -14,6 +14,11 @@ dependencies = [
 
 [tool.ruff]
 line-length = 180
+exclude = [
+    ".venv",
+    "__pycache__",
+    "*/migrations",
+]
 
 [dependency-groups]
 dev = [
