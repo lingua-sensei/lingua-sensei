@@ -1,8 +1,8 @@
 from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
 
-from linguist.core.models import Audio
-from linguist.core.serializers import AudioSerializer
+from linguist.models import Audio
+from linguist.serializers import AudioSerializer
 
 
 class AudioPagination(PageNumberPagination):

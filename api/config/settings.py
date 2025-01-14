@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "storages",
-    "linguist.core.apps.CoreConfig",
+    "linguist.apps.LinguistConfig",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "linguist.urls"
+ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "linguist.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database

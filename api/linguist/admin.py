@@ -1,5 +1,5 @@
 from django.contrib import admin
-from linguist.core.models import Audio
+from linguist.models import Audio
 from django.db.models import Count
 from django.utils.html import format_html
 from django.db.models import Q

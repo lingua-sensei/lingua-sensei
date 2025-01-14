@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from linguist.core.models import Audio
+from linguist.models import Audio
 
 
 class BasicAudioSerializer(serializers.ModelSerializer):
