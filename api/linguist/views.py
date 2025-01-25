@@ -11,7 +11,13 @@ class AudioPagination(PageNumberPagination):
     max_page_size = 100
 
 
-class AudioView(generics.ListAPIView):
+class AudioListView(generics.ListAPIView):
     queryset = Audio.objects.all()
     serializer_class = AudioSerializer
     pagination_class = AudioPagination
+
+
+class AudioDetailView(generics.RetrieveAPIView):
+    queryset = Audio.objects.all()
+    serializer_class = AudioSerializer
+    lookup_field = "id"

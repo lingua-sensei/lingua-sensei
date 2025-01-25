@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "boto3>=1.35.94",
     "django>=5.1.4",
+    "django-cors-headers>=4.6.0",
     "django-storages>=1.14.4",
     "djangorestframework>=3.15.2",
     "python-dotenv>=1.0.1",
