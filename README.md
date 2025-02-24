@@ -21,7 +21,7 @@ uv run pytest --cov=linguist --cov-report=html --cov-report=term-missing
 
 ### WEB
 
-Running frontend (Svelte 5), it will use localhost:5173
+Running frontend (Astro 5), it will use localhost:4321
 
 ```shell
 cd ./web
