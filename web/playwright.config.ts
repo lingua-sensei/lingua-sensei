@@ -5,8 +5,6 @@ export default defineConfig({
         command: 'pnpm run build && pnpm run preview',
         port: 4321,
         timeout: 120 * 1000,
-        //reuseExistingServer: !process.env.CI,
-        reuseExistingServer: true, // is this needed
     },
     use: {
         baseURL: 'http://localhost:4321/',
