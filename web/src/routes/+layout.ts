@@ -1,1 +1,0 @@
-export const prerender: boolean = true; // required for SSG
