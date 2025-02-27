@@ -1,21 +1,22 @@
 {
-  "name": "web",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-	"test": "vitest",
-	"test:browser": "playwright test"
-  },
-  "dependencies": {
-    "astro": "^5.3.0",
-    "astro-scope": "^3.0.1"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.50.1",
-    "vitest": "^3.0.6"
-  }
+    "name": "web",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "test": "vitest",
+        "test:browser": "playwright test",
+        "biome": "pnpx @biomejs/biome check"
+    },
+    "dependencies": {
+        "astro": "^5.3.0",
+        "astro-scope": "^3.0.1"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.50.1",
+        "vitest": "^3.0.6"
+    }
 }
